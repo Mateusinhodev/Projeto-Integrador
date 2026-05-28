@@ -1,0 +1,17 @@
+/* CORES */
+
+/* 
+Formatos de cor:
+
+color: red; [tipo nome (em inglês)]
+color: #FF0000; [tipo hexadecimal (A - F e 0 - 9)]
+
+*/
+
+.nome {
+    color: red;
+}
+
+.hexadecimal {
+    color: #FF0000;
+}
