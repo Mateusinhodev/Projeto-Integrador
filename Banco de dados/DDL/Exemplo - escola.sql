@@ -95,7 +95,7 @@ CREATE TABLE turmas (
         -- Impede excluir professor se ele estiver vinculado a uma turma
 );
 
--- Tabela: disciplina
+-- Tabela: disciplinas
 CREATE TABLE disciplinas(
 	-- Identificador da disciplina
     id_disciplina INT AUTO_INCREMENT PRIMARY KEY,
@@ -191,4 +191,4 @@ ON DELETE RESTRICT;
 -- 3: Não é possivel excluir uma turma que possua alunos vinculados (RESTRICT)
 
 -- Apaga o Banco de Dados
-DROP DATABASE IF EXISTS escola;
+-- DROP DATABASE IF EXISTS escola;
