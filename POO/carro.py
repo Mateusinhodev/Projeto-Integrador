@@ -18,6 +18,7 @@ class Carro:
         self.velocidade += aumento
 
         print(f"O carro acelerou para {self.velocidade} km/h")
+<<<<<<< HEAD
 
     #Metodo frear
     def frear(self, reducao):
@@ -36,6 +37,8 @@ class Carro:
         print(f"Ano: {self.ano}")
         print(f"Velocidade Atual: {self.velocidade}")
 
+=======
+>>>>>>> 5d75952a6e2a766a70235ee3fafe5b4222f57179
 
 
 # Criando um objeto da Classe Carro
