@@ -15,7 +15,7 @@ class Carro:
         # self.velocidade = self.velocidade + aumento 
         self.velocidade += aumento
 
-        print(f"O carro acelerou para{self.velocidade} km/h")
+        print(f"O carro acelerou para {self.velocidade} km/h")
 
 
 # Criando um objeto da Classe Carro
