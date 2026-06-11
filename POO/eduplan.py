@@ -9,10 +9,6 @@ class Professor:
         self.email = email
         self.senha_hash = senha_hash
 
-    def exibir_dados(self):
-        print(f"Professor: {self.nome}")
-        print(f"E-mail: {self.email}")
-
 
 # ==========================================
 # CLASSE DISCIPLINA
@@ -24,13 +20,9 @@ class Disciplina:
         self.nome_disciplina = nome_disciplina
         self.area_conhecimento = area_conhecimento
 
-    def exibir_disciplina(self):
-        print(f"Disciplina: {self.nome_disciplina}")
-        print(f"Área: {self.area_conhecimento}")
-
 
 # ==========================================
-# CLASSE SERIE
+# CLASSE SÉRIE
 # ==========================================
 
 class Serie:
@@ -38,10 +30,6 @@ class Serie:
         self.id_serie = id_serie
         self.nome_serie = nome_serie
         self.nivel = nivel
-
-    def exibir_serie(self):
-        print(f"Série: {self.nome_serie}")
-        print(f"Nível: {self.nivel}")
 
 
 # ==========================================
@@ -51,7 +39,7 @@ class Serie:
 class Atividade:
     def __init__(self, titulo, conteudo, metodologia,
                  objetivos, professor, disciplina, serie):
-        
+
         self.titulo = titulo
         self.conteudo = conteudo
         self.metodologia = metodologia
@@ -63,49 +51,51 @@ class Atividade:
         self.serie = serie
 
     def exibir_atividade(self):
-        print("\n===== ATIVIDADE =====")
+        print("===== ATIVIDADE =====")
         print(f"Título: {self.titulo}")
-        print(f"Conteúdo: {self.conteudo}")
-        print(f"Metodologia: {self.metodologia}")
-        print(f"Objetivos: {self.objetivos}")
         print(f"Professor: {self.professor.nome}")
         print(f"Disciplina: {self.disciplina.nome_disciplina}")
         print(f"Série: {self.serie.nome_serie}")
+        print(f"\nConteúdo: {self.conteudo}")
+        print(f"\nMetodologia: {self.metodologia}")
+        print(f"\nObjetivos: {self.objetivos}")
 
 
 # ==========================================
-# PROGRAMA PRINCIPAL
+# CRIAÇÃO DOS OBJETOS
 # ==========================================
 
-# Criando objetos
 professor = Professor(
     1,
-    "Idomeneu",
-    "idomeneu@mail.com",
-    "123456"
+    "Mateus Rodrigues Barbosa Silva",
+    "mateus.silva@ifto.edu.br",
+    "senha_hash"
 )
 
 disciplina = Disciplina(
     1,
-    "Física",
-    "Ciências da Natureza"
+    "Programação Orientada a Objetos",
+    "Informática"
 )
 
 serie = Serie(
     1,
-    "2º Ano",
-    "Ensino Médio"
+    "3º Ano",
+    "Ensino Médio Integrado ao Técnico em Informática"
 )
 
 atividade = Atividade(
-    "Leis de Newton",
-    "Estudo das três leis do movimento.",
-    "Aula expositiva e resolução de exercícios.",
-    "Compreender os princípios da mecânica clássica.",
+    "Introdução à Programação Orientada a Objetos",
+    "Estudo dos conceitos de Classe, Objeto, Atributo e Método.",
+    "Aula expositiva seguida de atividade prática em Python.",
+    "Compreender os fundamentos da Programação Orientada a Objetos.",
     professor,
     disciplina,
     serie
 )
 
-# Executando métodos
+# ==========================================
+# TESTE
+# ==========================================
+
 atividade.exibir_atividade()
