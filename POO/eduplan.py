@@ -80,7 +80,7 @@ disciplina = Disciplina(
 
 serie = Serie(
     1,
-    "3º Ano",
+    "2º Ano",
     "Ensino Médio Integrado ao Técnico em Informática"
 )
 
