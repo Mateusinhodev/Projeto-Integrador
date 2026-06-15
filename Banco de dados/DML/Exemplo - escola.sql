@@ -1,3 +1,7 @@
+/* ==========================================================
+   INSERT
+   ========================================================== */
+
 -- Cadastro dos cursos oferecidos pela escola
 INSERT INTO cursos
 (nome, carga_horaria)
@@ -77,3 +81,121 @@ INSERT INTO notas
 (id_aluno, id_disciplina, nota)
 VALUES
 (1, 1, 10.00);
+
+/* ==========================================================
+   SELECT
+   ========================================================== */
+
+-- Listar todos os cursos
+SELECT * FROM cursos;
+
+-- Listar todos os professores
+SELECT * FROM professores;
+
+-- Listar todas as disciplinas
+SELECT * FROM disciplinas;
+
+-- Listar todas as turmas
+SELECT * FROM turmas;
+
+-- Listar todos os alunos
+SELECT * FROM alunos;
+
+-- Listar todas as notas
+SELECT * FROM notas;
+
+-- Consultar o curso Técnico em Informática
+SELECT *
+FROM cursos
+WHERE nome = 'Técnico em Informática';
+
+-- Consultar o professor Mateus
+SELECT *
+FROM professores
+WHERE nome = 'Mateus';
+
+-- Consultar a disciplina Banco de Dados
+SELECT *
+FROM disciplinas
+WHERE nome = 'Banco de Dados';
+
+-- Consultar o aluno Mateus Rodrigues
+SELECT *
+FROM alunos
+WHERE nome = 'Mateus Rodrigues';
+
+-- Consultar a nota do aluno
+SELECT *
+FROM notas
+WHERE id_aluno = 1;
+
+
+/* ==========================================================
+   UPDATE
+   ========================================================== */
+
+-- Atualizar a carga horária do curso Técnico em Informática
+UPDATE cursos
+SET carga_horaria = 1300
+WHERE id_curso = 1;
+
+-- Atualizar o e-mail do professor Mateus
+UPDATE professores
+SET email = 'mateus.silva@mail.com'
+WHERE id_professor = 3;
+
+-- Atualizar a carga horária da disciplina Banco de Dados
+UPDATE disciplinas
+SET carga_horaria = 100
+WHERE id_disciplina = 1;
+
+-- Atualizar a série da turma
+UPDATE turmas
+SET serie = 3
+WHERE id_turma = 1;
+
+-- Atualizar o telefone do aluno
+UPDATE alunos
+SET telefone = '(63) 99999-8888'
+WHERE id_aluno = 1;
+
+-- Atualizar a nota do aluno
+UPDATE notas
+SET nota = 9.50
+WHERE id_aluno = 1
+  AND id_disciplina = 1;
+
+
+/* ==========================================================
+   DELETE
+   ========================================================== */
+
+-- Excluir a nota do aluno
+DELETE FROM notas
+WHERE id_aluno = 1
+  AND id_disciplina = 1;
+
+-- Excluir o aluno cadastrado
+DELETE FROM alunos
+WHERE id_aluno = 1;
+
+-- Excluir a turma cadastrada
+DELETE FROM turmas
+WHERE id_turma = 1;
+
+-- Excluir a associação entre curso e disciplina
+DELETE FROM curso_disciplinas
+WHERE id_curso = 1
+  AND id_disciplina = 1;
+
+-- Excluir a disciplina Educação Física
+DELETE FROM disciplinas
+WHERE id_disciplina = 7;
+
+-- Excluir o professor Danilo
+DELETE FROM professores
+WHERE id_professor = 2;
+
+-- Excluir o curso Técnico em Agricultura
+DELETE FROM cursos
+WHERE id_curso = 2;
