@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 // =========================================================
 // MENU HAMBÚRGUER 
 // =========================================================
 
+=======
+>>>>>>> 422f860655441805e4544a0c4bf3810b0d1eee03
 // 1. Seleciona os elementos que vamos usar
 const botaoMenu = document.querySelector("#btn-menu");
 const menu = document.querySelector(".nav");
@@ -11,6 +14,7 @@ botaoMenu.addEventListener("click", function () {
     // 3. Alterna (liga/desliga) a classe "ativo" no menu
     menu.classList.toggle("ativo");
 });
+<<<<<<< HEAD
 
 
 // =========================================================
@@ -77,3 +81,5 @@ const anoAtual = new Date().getFullYear();
 
 // 3. Escreve o ano dentro do <span>. Assim o rodapé nunca fica desatualizado
 campoAno.textContent = anoAtual;
+=======
+>>>>>>> 422f860655441805e4544a0c4bf3810b0d1eee03
